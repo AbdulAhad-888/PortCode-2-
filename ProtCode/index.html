@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortCode</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: #FFFFFF;
+            background: -webkit-linear-gradient(to bottom, #FFFFFF, #000000);
+            background: linear-gradient(to bottom, #FFFFFF, #000000);
+            background-repeat: no-repeat;
+            height: auto;
+            min-height: 100vh;
+        }
+
+        .inp-cus-bor:focus {
+            outline: none;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #errorMessage {
+            font-size: 25px;
+        }
+
+        .nav-link.active span {
+            border-bottom: 2px solid #0d6efd !important;
+            color: #0d6efd;
+        }
+
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.97);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+        }
+
+        .loader-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .loader {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+            background: #3498db;
+            border-radius: 50%;
+            animation: bounce 1s infinite ease-in-out;
+        }
+
+        .loader:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loader:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader-wrapper">
+        <div class="loader-container">
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary px-4 py-2"
+            style="border-bottom: 1px solid rgb(190, 190, 190);">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bolder fs-1" href="./index.html"><span
+                        class="text-primary">Port</span>Code</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ps-5" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a style="font-size: 18px;" class="nav-link active ms-0 ms-md-5 fw-normal"
+                                aria-current="page" href="./index.html">Ho<span>me</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="font-size: 18px;" class="nav-link ms-0 ms-md-4 fw-normal"
+                                href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="font-size: 18px;" class="nav-link ms-0 ms-md-4 fw-normal"
+                                href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="float-end">
+                    <a href="./login.html"
+                        class="btn fw-normal px-4 py-2 me-0 me-md-3 text-black border border-1 border-black rounded-0">Login
+                        In</a>
+                    <a href="./sign.html"
+                        class="fw-normal px-4 py-2 me-0 me-md-3 text-decoration-none btn text-light btn-primary">Sign
+                        Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid bg-body-tertiary"
+        style="padding-bottom: 100px; border-bottom: 1px solid rgb(190, 190, 190); box-shadow: 0px 10px 20px black;">
+        <div class="px-5 pt-5">
+            <div class="float-start">
+                <h1 class="text-black fw-semibold">Check Out the Website <span class="text-primary py-2"
+                        style="border-bottom: 2px solid #0d6efd;">Template's</span></h1>
+            </div>
+            <div class="float-md-end pe-3 d-md-inline-block d-block" style="border-bottom: 1px solid black;">
+                <input type="text" class="inp-cus-bor border-0 m-2 p-2 bg-transparent"
+                    placeholder="Search all templates...">
+                <span class="bi bi-search d-md-inline-block d-none"></span>
+            </div>
+        </div>
+    </div>
+
+    <section class="sec-2">
+        <div class="container-fluid p-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Day</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Day/" target="blank"><img
+                                src="./assessts/screenshot_12_25_2023_2-18-34 AM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Logistics</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Logistics/" target="blank"><img
+                                src="./assessts/screenshot_12_24_2023_4-38-00 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Emily</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Emily%20Portfolio/index.html"
+                            target="blank"><img src="./assessts/screenshot_12_24_2023_4-22-16 PM.png"
+                                class="rounded-0 card-img-top img-fluid" alt="..."></a>
+                        <a href="https://csstemplatesite.000webhostapp.com/Emily%20Portfolio/" target="blank"><img
+                                src="./assessts/screenshot_12_21_2023_10-02-11 PM.png"
+                                class="rounded-0 card-img-top img-fluid" alt="..."></a>
+                        <a href="https://csstemplatesite.000webhostapp.com/Emily%20Portfolio/resume.html"
+                            target="blank"><img src="./assessts/screenshot_12_24_2023_4-28-30 PM.png"
+                                class="rounded-0 card-img-top img-fluid" alt="..."></a>
+                        <a href="https://csstemplatesite.000webhostapp.com/Emily%20Portfolio/services.html"
+                            target="blank"><img src="./assessts/screenshot_12_24_2023_4-29-30 PM.png"
+                                class="rounded-0 card-img-top img-fluid" alt="..."></a>
+                        <a href="https://csstemplatesite.000webhostapp.com/Emily%20Portfolio/services.html"
+                            target="blank"><img src="./assessts/screenshot_12_24_2023_4-29-30 PM.png"
+                                class="rounded-0 card-img-top img-fluid" alt="..."></a>
+                        <a href="https://csstemplatesite.000webhostapp.com/Emily%20Portfolio/portfoilio.html"
+                            target="blank"><img src="./assessts/screenshot_12_24_2023_4-30-30 PM.png"
+                                class="rounded-0 card-img-top img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">METAVERSE</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Figma%201/" target="blank"><img
+                                src="./assessts/screenshot_12_24_2023_4-51-06 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Coastal</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Figma%203/" target="blank"><img
+                                src="./assessts/screenshot_12_24_2023_4-52-32 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Ui Learning</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Template%203/" target="blank"><img
+                                src="./assessts/screenshot_12_21_2023_10-50-13 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Dev Folio</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Dev%20Folio/" target="blank"><img
+                                src="./assessts/screenshot_12_21_2023_10-01-27 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Zen Blog</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Zen%20Blog/" target="blank"><img
+                                src="./assessts/screenshot_12_22_2023_7-27-18 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">SoftLand</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/SoftLand/" target="blank"><img
+                                src="./assessts/screenshot_12_22_2023_7-23-44 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">The Event</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/The%20Event/" target="blank"><img
+                                src="./assessts/screenshot_12_22_2023_7-25-15 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Resturauntly</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Resturauntly/" target="blank"><img
+                                src="./assessts/screenshot_12_22_2023_7-20-26 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Market Research</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Figma%202/" target="blank"><img
+                                src="./assessts/screenshot_12_22_2023_7-17-05 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">GrayScale</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Template%204/" target="blank"><img
+                                src="./assessts/screenshot_12_21_2023_10-49-22 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card mx-0 mx-md-5 my-3">
+                        <div>
+                            <p class="text-start fw-bold fs-4 px-3 pt-2 text-black">Nice Admin</p>
+                        </div>
+                        <a href="https://csstemplatesite.000webhostapp.com/Nice%20Admin/" target="blank"><img
+                                src="./assessts/screenshot_12_21_2023_10-46-40 PM.png"
+                                class="card-img-top rounded-0 img-fluid" alt="..."></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="errorMessage" class="text-center text-danger mt-3" style="display: none;">
+        No results found.
+    </div>
+
+    <footer style="border-top: 1px solid rgb(190, 190, 190);">
+        <div class="text-center p-5">
+            <a href="#" class="fw-semibold text-white fs-6 text-decoration-none">&copy Copyright <span
+                    class="mx-1 rounded-2"
+                    style="color: #0d6efd; border: 2px solid #0d6efd; background-color: #ffffff; padding: 5px 10px;">Prot<span
+                        style="color: black;">Code</span></span> Rights Are Reserved 2023</a>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var searchInput = document.querySelector(".inp-cus-bor");
+            var searchButton = document.querySelector(".bi-search");
+            var errorMessage = document.getElementById("errorMessage");
+
+            searchButton.addEventListener("click", function () {
+                performSearch();
+            });
+
+            searchInput.addEventListener("input", function () {
+                updateSuggestions();
+            });
+
+            searchInput.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    performSearch();
+                }
+            });
+
+            function performSearch() {
+                var searchQuery = searchInput.value.toLowerCase().trim();
+
+                if (searchQuery.length < 2) {
+                    resetSearch();
+                    return;
+                }
+
+                var cardsContainer = document.querySelector(".row-cols-1");
+                var cards = Array.from(cardsContainer.children);
+
+                var filteredCards = cards.filter(function (card) {
+                    var cardTitle = card.querySelector(".text-start").textContent.toLowerCase();
+                    return cardTitle.includes(searchQuery);
+                });
+
+                if (filteredCards.length === 0) {
+                    showError();
+                    return;
+                }
+
+                hideError();
+
+                cards.forEach(function (card) {
+                    card.style.display = "none";
+                });
+
+                filteredCards.forEach(function (card) {
+                    card.style.display = "block";
+                });
+
+                cardsContainer.innerHTML = "";
+                filteredCards.forEach(function (card) {
+                    cardsContainer.appendChild(card);
+                });
+            }
+
+            function updateSuggestions() {
+                var searchQuery = searchInput.value.toLowerCase().trim();
+
+                var cardsContainer = document.querySelector(".row-cols-1");
+                var cards = Array.from(cardsContainer.children);
+
+                cards.forEach(function (card) {
+                    card.style.display = "block";
+                });
+
+                if (searchQuery.length < 1) {
+                    return;
+                }
+
+                var suggestedCards = cards.filter(function (card) {
+                    var cardTitle = card.querySelector(".text-start").textContent.toLowerCase();
+                    return cardTitle.includes(searchQuery);
+                });
+
+                cards.forEach(function (card) {
+                    if (!suggestedCards.includes(card)) {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            function resetSearch() {
+                var cardsContainer = document.querySelector(".row-cols-1");
+                var cards = Array.from(cardsContainer.children);
+
+                cards.forEach(function (card) {
+                    card.style.display = "block";
+                });
+
+                cardsContainer.innerHTML = "";
+                cards.forEach(function (card) {
+                    cardsContainer.appendChild(card);
+                });
+            }
+            function showError() {
+                errorMessage.style.display = "block";
+            }
+
+            function hideError() {
+                errorMessage.style.display = "none";
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var loaderDuration = 2000;
+
+            setTimeout(function () {
+                var loaderWrapper = document.querySelector('.loader-wrapper');
+                loaderWrapper.style.display = 'none';
+            }, loaderDuration);
+        });
+    </script>
+
+
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
